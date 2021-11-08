@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-align: center;
+}
+#page{
+    width: 100vw;
+    min-height: 85vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+#menuBar{
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16pt;
+}
+#menuBar p.title{
+    width: 100vw;
+    height: 30px;
+    margin-top: 25px;
+}
+#pageTitle{
+    width: 80vw;
+    margin-left: 10vw;
+}
+#pageContent{
+    width: 90vw;
+    margin-left: 5vw;
+}
+#navOptions{
+    width: 100vw;
+    background-color: rgb(20, 20, 20);
+    position: fixed;
+    bottom: 0;
+    border-top: 3px solid white;
+}
+.button{
+    width: 80vw;
+    height: 50px;
+    border-radius: 5px;
+    background-color:rgb(20, 20, 20);
+    margin: 10px;
+    margin-left: 10vw;
+    display: flex;
+    justify-content: center;
+}
+.button p{
+    line-height: 1;
+}
