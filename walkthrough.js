@@ -10,21 +10,17 @@ class navButton{
         navBlock.innerHTML = buttonHTML
     }
 }
-class pageContent{
-    constructor(file){
-        this.text = FileReader.readAsText(file)
-        content.innerHTML = `<p>${this.text}</p>`
-    }
-}
 
 function loadIntro(){
     header.innerText = 'Free. Your. Device.'
-    new pageContent('pages/intro.txt')
+    content.innerHTML = '<div include=\'pages/intro.html\'></div>'
     new navButton('Get Started!', 'loadAboutJB()')
+    includeHTML()
 }
 function loadAboutJB(){
     alert('Please make sure you\'ve bookmarked this site if this is the device to be jailbroken!')
     header.innerText = 'What is Jailbreaking?'
     content.innerText = 'Jailbreaking is the process of bypassing the security measures on a device (in this case an iPhone or iPad) in order to execute third-party code.\n\nThe process does come with a few security drawbacks, however the iOS jailbreak community is usually very good at mitigating these issues.\n\nJailbreaks are created using security vulnerabilities found in-the-wild by iOS security researchers, which are then exploited to gain root access on a device.'
     new navButton('What\'s the point?', 'loadReasonsToJB()')
+    includeHTML()
 }
