@@ -1,6 +1,7 @@
 const header = document.querySelector('#pageTitle')
 const content = document.querySelector('#pageContent')
 const navBlock = document.querySelector('#navOptions')
+const menuBar = document.querySelector('#menuBar')
 
 var lastPage
 
@@ -12,14 +13,22 @@ class navButton{
         navBlock.innerHTML = buttonHTML
     }
 }
+class tableButton{
+    constructor(state){
+        menuBar.querySelector('div').style.display = state
+    }
+}
 
 function tableOfContents(){
+    new tableButton('none')
     header.innerText = 'Table of Contents'
     content.innerHTML = '<div include=\'pages/tableofcontents.html\'></div>'
     new navButton(`Close (Back to ${lastPage[1]})`, `load${lastPage[0]}()`)
     includeHTML()
 }
+
 function loadIntro(){
+    new tableButton('initial')
     header.innerText = 'Free. Your. Device.'
     content.innerHTML = '<div include=\'pages/intro.html\'></div>'
     new navButton('Get Started!', 'loadAboutJB()')
@@ -27,7 +36,7 @@ function loadIntro(){
     includeHTML()
 }
 function loadAboutJB(){
-    alert('Please make sure you\'ve bookmarked this site if this is the device to be jailbroken!')
+    new tableButton('initial')
     header.innerText = 'What is Jailbreaking?'
     content.innerHTML = '<div include=\'pages/aboutJB.html\'></div>'
     new navButton('What\'s the point?', 'loadReasonsToJB()')
