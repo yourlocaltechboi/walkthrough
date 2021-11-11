@@ -8,24 +8,31 @@ body{
 }
 #page{
     width: 100vw;
-    min-height: 85vh;
+    height: auto;
     margin: 0;
+    margin-top: 100px;
     padding: 0;
-    background-color: black;
+    padding-top: 10px;
+    background-color: transparent;
 }
 #menuBar{
     width: 100vw;
-    height: 50px;
+    height: 100px;
     background-color: rgb(20, 20, 20);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-size: 16pt;
+    position: fixed;
+    top: 0;
+    border-bottom: 3px solid white;
 }
 #menuBar p.title{
     width: 100vw;
-    height: 30px;
-    margin-top: 25px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 #pageTitle{
     width: 80vw;
@@ -41,12 +48,13 @@ body{
     position: fixed;
     bottom: 0;
     border-top: 3px solid white;
+    overflow: hidden;
 }
 .button{
     width: 80vw;
     height: 50px;
     border-radius: 5px;
-    background-color:rgb(20, 20, 20);
+    background-color:rgb(40, 40, 40);
     margin: 10px;
     margin-left: 10vw;
     display: flex;
@@ -58,8 +66,8 @@ body{
 .buttonHeader{
     background-color: rgb(40, 40, 40);
     width: 250px;
-    height: 30px;
-    margin-right: 10px;
+    height: 50px;
+    margin-bottom: 10px;
     font-size: 12pt;
     padding-top: 0;
     display: flex;
@@ -70,5 +78,8 @@ body{
     line-height: 1;
     margin: 0;
     padding: 0;
-    margin-top: 7.5px
+    margin-top: 10px
+}
+.left{
+    text-align: left;
 }
