@@ -29,7 +29,7 @@ function loadIntro(){
 function loadAboutJB(){
     alert('Please make sure you\'ve bookmarked this site if this is the device to be jailbroken!')
     header.innerText = 'What is Jailbreaking?'
-    content.innerHTML = '<div include=\'aboutJB.html\'></div>'
+    content.innerHTML = '<div include=\'pages/aboutJB.html\'></div>'
     new navButton('What\'s the point?', 'loadReasonsToJB()')
     lastPage = ['AboutJB', 'About Jailbreaking']
     includeHTML()
