@@ -48,7 +48,6 @@ body{
     position: fixed;
     bottom: 0;
     border-top: 3px solid white;
-    overflow: hidden;
 }
 .button{
     width: 80vw;
@@ -78,8 +77,11 @@ body{
     line-height: 1;
     margin: 0;
     padding: 0;
-    margin-top: 10px
 }
 .left{
     text-align: left;
+}
+ol li:hover{
+    color: rgb(80, 80, 80);
+    text-decoration: underline;
 }
