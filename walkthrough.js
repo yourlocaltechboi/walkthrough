@@ -78,7 +78,3 @@ function loadDevicePicker(){
     lastPage = ['DevicePicker', 'Which device do you have?']
     includeHTML()
 }
-function fetchDevicesAndVersions(){
-    const devices = require('devices.json')
-    deviceMenu.innerHTML = ``
-}
