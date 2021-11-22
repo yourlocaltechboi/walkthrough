@@ -11,6 +11,7 @@ class navButton{
     constructor(text, location){
         const buttonHTML = `<div class='button' onclick='${location}'><p><b>${text}</b></p></div>`
         navBlock.innerHTML = buttonHTML
+        navBlock.querySelector('.button').style.display = ''
     }
 }
 class tableButton{
@@ -74,7 +75,7 @@ function loadDevicePicker(){
     new tableButton('initial')
     header.innerText = 'Pick your device:'
     content.innerHTML = '<div include=\'pages/pageContents/devicePicker.html\'></div>'
-    new navButton('Check Jailbreak Options', 'loadJBOptions()')
+    navBlock.querySelector('.button').style.display = 'none'
     lastPage = ['DevicePicker', 'Which device do you have?']
     includeHTML()
 }
