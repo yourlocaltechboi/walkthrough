@@ -55,6 +55,14 @@ function loadiPhones(page){
         navBlock.querySelector('.button').style.display = 'none'
         includeHTML()
     }
+    if (page == 'legacy'){
+        new tableButton('initial')
+        header.innerText = 'Legacy Devices/Versions'
+        content.innerHTML = '<div include=\'pages/pageContents/hardwares/legacy.html\'></div>'
+        navBlock.querySelector('.button').style.display = ''
+        new navButton('Back to start', 'loadIntro()')
+        includeHTML()
+    }
 }
 function loadiPads(page){
     if (page == 'home'){
