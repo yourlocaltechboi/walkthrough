@@ -11,6 +11,7 @@ body{
     height: auto;
     margin: 0;
     margin-top: 100px;
+    margin-bottom: 20px;
     padding: 0;
     padding-top: 10px;
     background-color: transparent;
@@ -18,7 +19,7 @@ body{
 #menuBar{
     width: 100vw;
     height: 100px;
-    background-color: rgb(20, 20, 20);
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,20 +41,24 @@ body{
 }
 #pageContent{
     width: 90vw;
+    height: auto;
     margin-left: 5vw;
+    padding-bottom: 100px;
 }
 #navOptions{
     width: 100vw;
-    background-color: rgb(20, 20, 20);
+    height: 70px;
+    background-color: black;
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
+    padding-bottom: 20px;
     border-top: 3px solid white;
 }
 .button{
     width: 80vw;
     height: 50px;
     border-radius: 5px;
-    background-color:rgb(40, 40, 40);
+    background-color: rgb(40, 40, 40);
     margin: 10px;
     margin-left: 10vw;
     display: flex;

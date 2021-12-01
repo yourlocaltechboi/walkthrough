@@ -25,14 +25,16 @@ function tableOfContents(){
     header.innerText = 'Table of Contents'
     content.innerHTML = '<div include=\'pages/pageContents/tableofcontents.html\'></div>'
     new navButton(`Close (Back to \'${lastPage[1]}\')`, `load${lastPage[0]}()`)
+    refreshNavBlock()
     includeHTML()
 }
 
 function loadIntro(){
     new tableButton('initial')
     header.innerText = 'Free. Your. Device.'
-    content.innerHTML = '<div include=\'pages/pageContents/intro.html\'></div>'
+    content.innerHTML = '<div include=\'pages/pageContents/introPages/intro.html\'></div>'
     new navButton('Get Started!', 'loadAboutJB()')
+    refreshNavBlock()
     lastPage = ['Intro', 'Intro']
     document.cookie = 'page=Intro'
     includeHTML()
@@ -40,8 +42,9 @@ function loadIntro(){
 function loadAboutJB(){
     new tableButton('initial')
     header.innerText = 'What is Jailbreaking?'
-    content.innerHTML = '<div include=\'pages/pageContents/aboutJB.html\'></div>'
+    content.innerHTML = '<div include=\'pages/pageContents/introPages/aboutJB.html\'></div>'
     new navButton('What\'s the point?', 'loadReasonsToJB()')
+    refreshNavBlock()
     lastPage = ['AboutJB', 'About jailbreaking']
     document.cookie = 'page=AboutJB'
     includeHTML()
@@ -49,33 +52,45 @@ function loadAboutJB(){
 function loadReasonsToJB(){
     new tableButton('initial')
     header.innerText = 'Why should you Jailbreak?'
-    content.innerHTML = '<div include=\'pages/pageContents/whyJB.html\'></div>'
+    content.innerHTML = '<div include=\'pages/pageContents/introPages/whyJB.html\'></div>'
     new navButton('What are the caveats?', 'loadCaveats()')
+    refreshNavBlock()
     lastPage = ['ReasonsToJB', 'What\'s the point of jailbreaking?']
-    document.cookie
     includeHTML()
 }
 function loadCaveats(){
     new tableButton('initial')
     header.innerText = 'Caveats of Jailbreaking'
-    content.innerHTML = '<div include=\'pages/pageContents/JBCaveats.html\'></div>'
+    content.innerHTML = '<div include=\'pages/pageContents/introPages/JBCaveats.html\'></div>'
     new navButton('Ready to Start', 'loadDisclaimer()')
+    refreshNavBlock()
     lastPage = ['Caveats', 'What are the caveats?']
     includeHTML()
 }
 function loadDisclaimer(){
     new tableButton('initial')
     header.innerText = 'DISCLAIMER'
-    content.innerHTML = '<div include=\'pages/pageContents/disclaimer.html\'></div>'
+    content.innerHTML = '<div include=\'pages/pageContents/introPages/disclaimer.html\'></div>'
     new navButton('Accept and Continue', 'loadDevicePicker()')
+    refreshNavBlock()
     lastPage = ['Disclaimer', 'Disclaimer']
     includeHTML()
 }
 function loadDevicePicker(){
     new tableButton('initial')
     header.innerText = 'Pick your device:'
-    content.innerHTML = '<div include=\'pages/pageContents/devicePicker.html\'></div>'
+    content.innerHTML = '<div include=\'pages/pageContents/devices/devicePicker.html\'></div>'
     navBlock.querySelector('.button').style.display = 'none'
+    refreshNavBlock()
     lastPage = ['DevicePicker', 'Which device do you have?']
     includeHTML()
+}
+
+function refreshNavBlock(){
+    if (navBlock.querySelector('.button').style.display == 'none'){
+        navBlock.style.height = '20px'
+    }
+    else if (navBlock.querySelector('.button').style.display == ''){
+        navBlock.style.height = '70px'
+    }
 }

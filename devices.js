@@ -5,8 +5,9 @@ function loadiPhones(page){
     if (page == 'home'){
         new tableButton('initial')
         header.innerText = 'Pick your iPhone:'
-        content.innerHTML = '<div include=\'pages/pageContents/phones.html\'></div>'
+        content.innerHTML = '<div include=\'pages/pageContents/devices/phones.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         includeHTML()
     }
     if (page == 'a15'){
@@ -14,6 +15,7 @@ function loadiPhones(page){
         header.innerText = 'Versions Available for A15 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a15.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = false
         unthr = false
         includeHTML()
@@ -23,6 +25,7 @@ function loadiPhones(page){
         header.innerText = 'Versions Available for A14 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a14.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = false
         unthr = true
         includeHTML()
@@ -32,6 +35,7 @@ function loadiPhones(page){
         header.innerText = 'Versions Available for A13 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a13.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = false
         unthr = true
         includeHTML()
@@ -41,6 +45,7 @@ function loadiPhones(page){
         header.innerText = 'Versions Available for A12 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a12.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = false
         unthr = true
         includeHTML()
@@ -50,6 +55,7 @@ function loadiPhones(page){
         header.innerText = 'Versions Available for A11 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a11.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = true
         unthr = false
         includeHTML()
@@ -59,6 +65,7 @@ function loadiPhones(page){
         header.innerText = 'Versions Available for A10 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a10.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = true
         unthr = false
         includeHTML()
@@ -68,6 +75,7 @@ function loadiPhones(page){
         header.innerText = 'Versions Available for A9 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a9.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = true
         unthr = false
         includeHTML()
@@ -77,6 +85,7 @@ function loadiPhones(page){
         header.innerText = 'Legacy Devices/Versions'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/legacy.html\'></div>'
         navBlock.querySelector('.button').style.display = ''
+        refreshNavBlock()
         new navButton('Back to start', 'loadIntro()')
         includeHTML()
     }
@@ -85,8 +94,9 @@ function loadiPads(page){
     if (page == 'home'){
         new tableButton('initial')
         header.innerText = 'Pick your iPad:'
-        content.innerHTML = '<div include=\'pages/pageContents/tablets.html\'></div>'
+        content.innerHTML = '<div include=\'pages/pageContents/devices/tablets.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         includeHTML()
     }
     if (page == 'm1'){
@@ -94,6 +104,17 @@ function loadiPads(page){
         header.innerText = 'Versions Available for M1 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/m1.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
+        chkrn = false
+        unthr = false
+        includeHTML()
+    }
+    if (page == 'a15'){
+        new tableButton('initial')
+        header.innerText = 'Versions Available for A15 Devices'
+        content.innerHTML = '<div include=\'pages/pageContents/hardwares/a15.html\'></div>'
+        navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = false
         unthr = false
         includeHTML()
@@ -103,6 +124,7 @@ function loadiPads(page){
         header.innerText = 'Versions Available for A14 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a14.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = false
         unthr = true
         includeHTML()
@@ -112,6 +134,7 @@ function loadiPads(page){
         header.innerText = 'Versions Available for A13 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a13.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = false
         unthr = true
         includeHTML()
@@ -121,6 +144,7 @@ function loadiPads(page){
         header.innerText = 'Versions Available for A12 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a12.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
+        refreshNavBlock()
         chkrn = false
         unthr = true
         includeHTML()
@@ -130,7 +154,8 @@ function loadiPads(page){
         header.innerText = 'Versions Available for A11 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a11.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
-        chkrn = false
+        refreshNavBlock()
+        chkrn = true
         unthr = false
         includeHTML()
     }
@@ -139,7 +164,8 @@ function loadiPads(page){
         header.innerText = 'Versions Available for A10 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a10.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
-        chkrn = false
+        refreshNavBlock()
+        chkrn = true
         unthr = false
         includeHTML()
     }
@@ -148,7 +174,8 @@ function loadiPads(page){
         header.innerText = 'Versions Available for A9 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a9.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
-        chkrn = false
+        refreshNavBlock()
+        chkrn = true
         unthr = false
         includeHTML()
     }
@@ -157,7 +184,8 @@ function loadiPads(page){
         header.innerText = 'Versions Available for A8 Devices'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/a8.html\'></div>'
         navBlock.querySelector('.button').style.display = 'none'
-        chkrn = false
+        refreshNavBlock()
+        chkrn = true
         unthr = false
         includeHTML()
     }
@@ -166,6 +194,7 @@ function loadiPads(page){
         header.innerText = 'Legacy Devices/Versions'
         content.innerHTML = '<div include=\'pages/pageContents/hardwares/legacy.html\'></div>'
         navBlock.querySelector('.button').style.display = ''
+        refreshNavBlock()
         new navButton('Back to start', 'loadIntro()')
         includeHTML()
     }
@@ -174,8 +203,9 @@ function loadiOS(version){
     if (version == '15.0' || version == '15.0.1' || version == '15.0.2' || version == '15.1' || version == '15.1.1'){
         new tableButton('initial')
         header.innerText = "Version or device not supported"
-        content.innerHTML = '<div include=\'pages/pageContents/toonew.html\'></div>'
+        content.innerHTML = '<div include=\'pages/pageContents/jbs/toonew.html\'></div>'
         navBlock.querySelector('.button').style.display = ''
+        refreshNavBlock()
         new navButton('Back to start', 'loadIntro()')
         includeHTML()
     }
@@ -185,14 +215,16 @@ function loadiOS(version){
             header.innerText = "You have a jailbreak available!"
             content.innerHTML = '<div include=\'pages/pageContents/jbs/jbsupported-chkrnonly.html\'></div>'
             navBlock.querySelector('.button').style.display = ''
+            refreshNavBlock()
             new navButton('Jailbreak with checkra1n', 'loadJB(\'chkrn\')')
             includeHTML()
         }
         else{
             new tableButton('initial')
             header.innerText = "Version or device not supported"
-            content.innerHTML = '<div include=\'pages/pageContents/toonew.html\'></div>'
+            content.innerHTML = '<div include=\'pages/pageContents/jbs/toonew.html\'></div>'
             navBlock.querySelector('.button').style.display = ''
+            refreshNavBlock()
             new navButton('Back to start', 'loadIntro()')
             includeHTML()
         }
@@ -203,20 +235,23 @@ function loadiOS(version){
         if (chkrn == true){
             content.innerHTML = '<div include=\'pages/pageContents/jbs/jbsupported-chkrnonly.html\'></div>'
             navBlock.querySelector('.button').style.display = ''
+            refreshNavBlock()
             new navButton('Jailbreak with checkra1n', 'loadJB(\'chkrn\')')
             includeHTML()
         }
         else if (unthr == true){
             content.innerHTML = '<div include=\'pages/pageContents/jbs/jbsupported-untonly.html\'></div>'
             navBlock.querySelector('.button').style.display = 'none'
+            refreshNavBlock()
             new navButton('Jailbreak with unc0ver', 'loadJB(\'u0\')')
             includeHTML()
         }
         else{
             new tableButton('initial')
             header.innerText = "Version or device not supported"
-            content.innerHTML = '<div include=\'pages/pageContents/toonew.html\'></div>'
+            content.innerHTML = '<div include=\'pages/pageContents/jbs/toonew.html\'></div>'
             navBlock.querySelector('.button').style.display = ''
+            refreshNavBlock()
             new navButton('Back to start', 'loadIntro()')
             includeHTML()
         }
@@ -227,11 +262,29 @@ function loadiOS(version){
         if (chkrn == true){
             content.innerHTML = '<div include=\'pages/pageContents/jbs/jbsupported-all14.html\'></div>'
             navBlock.querySelector('.button').style.display = 'none'
+            refreshNavBlock()
             includeHTML()
         }
         else{
             content.innerHTML = '<div include=\'pages/pageContents/jbs/jbsupported-semiuntethered14.html\'></div>'
             navBlock.querySelector('.button').style.display = 'none'
+            refreshNavBlock()
+            includeHTML()
+        }
+    }
+    else if (version == '13.x'){
+        new tableButton('initial')
+        header.innerText = "You have multiple jailbreaks available!"
+        if (chkrn == true){
+            content.innerHTML = '<div include=\'pages/pageContents/jbs/jbsupported-all13.html\'></div>'
+            navBlock.querySelector('.button').style.display = 'none'
+            refreshNavBlock()
+            includeHTML()
+        }
+        else{
+            content.innerHTML = '<div include=\'pages/pageContents/jbs/jbsupported-semiuntethered13.html\'></div>'
+            navBlock.querySelector('.button').style.display = 'none'
+            refreshNavBlock()
             includeHTML()
         }
     }
