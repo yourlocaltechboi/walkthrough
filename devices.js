@@ -241,7 +241,7 @@ function loadiOS(version){
         }
         else if (unthr == true){
             content.innerHTML = '<div include=\'pages/pageContents/jbs/jbsupported-untonly.html\'></div>'
-            navBlock.querySelector('.button').style.display = 'none'
+            navBlock.querySelector('.button').style.display = ''
             refreshNavBlock()
             new navButton('Jailbreak with unc0ver', 'loadJB(\'u0\')')
             includeHTML()

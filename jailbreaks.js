@@ -1,8 +1,6 @@
-function loadJB(jailbreak, page){
+function loadJB(jailbreak){
     if (jailbreak == 'chkrn'){
-        if (page == 1){
-            
-        }
+        
     }
     else if (jailbreak == 'u0'){
 
