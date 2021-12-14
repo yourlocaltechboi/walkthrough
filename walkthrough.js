@@ -4,19 +4,31 @@ const navBlock = document.querySelector('#navOptions')
 const menuBar = document.querySelector('#menuBar')
 const deviceMenu = document.querySelector('#deviceMenu')
 const versionMenu = document.querySelector('#versionMenu')
+const backButtonBlock = document.querySelector('#backButton')
 
 var lastPage
 
 class navButton{
     constructor(text, location){
-        const buttonHTML = `<div class='button' onclick='${location}'><p><b>${text}</b></p></div>`
+        const buttonHTML = `<div class='button' onclick='${location}'><p><b>${text}</b> <i class="fas fa-arrow-right"></i></p></div>`
         navBlock.innerHTML = buttonHTML
         navBlock.querySelector('.button').style.display = ''
     }
 }
+class backButton{
+    constructor(enabled, location){
+        backButtonBlock.innerHTML = `<div class='buttonHeader' onclick='load${location}'><p style="margin-top: 11.5px"><i class="fas fa-arrow-left"></i></p></div>`
+        if (enabled == false){
+            backButtonBlock.style.color = 'rgb(120,120,120)'
+        }
+        else if (enabled == true){
+            backButtonBlock.style.color = 'white'
+        }
+    }
+}
 class tableButton{
     constructor(state){
-        menuBar.querySelector('div').style.display = state
+        menuBar.querySelector('#tableButton').style.display = state
     }
 }
 
@@ -29,14 +41,18 @@ function tableOfContents(){
     includeHTML()
 }
 
+function loadNone(){
+    return;
+}
+
 function loadIntro(){
     new tableButton('initial')
+    new backButton(false, 'None')
     header.innerText = 'Free. Your. Device.'
     content.innerHTML = '<div include=\'pages/pageContents/introPages/intro.html\'></div>'
     new navButton('Get Started!', 'loadAboutJB()')
     refreshNavBlock()
     lastPage = ['Intro', 'Intro']
-    document.cookie = 'page=Intro'
     includeHTML()
 }
 function loadAboutJB(){
@@ -46,6 +62,7 @@ function loadAboutJB(){
     new navButton('What\'s the point?', 'loadReasonsToJB()')
     refreshNavBlock()
     lastPage = ['AboutJB', 'About jailbreaking']
+    new backButton(true, 'Intro()')
     document.cookie = 'page=AboutJB'
     includeHTML()
 }
@@ -56,6 +73,7 @@ function loadReasonsToJB(){
     new navButton('What are the caveats?', 'loadCaveats()')
     refreshNavBlock()
     lastPage = ['ReasonsToJB', 'What\'s the point of jailbreaking?']
+    new backButton(true, 'AboutJB()')
     includeHTML()
 }
 function loadCaveats(){
@@ -65,6 +83,7 @@ function loadCaveats(){
     new navButton('Ready to Start', 'loadDisclaimer()')
     refreshNavBlock()
     lastPage = ['Caveats', 'What are the caveats?']
+    new backButton(true, 'ReasonsToJB()')
     includeHTML()
 }
 function loadDisclaimer(){
@@ -74,6 +93,7 @@ function loadDisclaimer(){
     new navButton('Accept and Continue', 'loadDevicePicker()')
     refreshNavBlock()
     lastPage = ['Disclaimer', 'Disclaimer']
+    new backButton(true, 'Caveats()')
     includeHTML()
 }
 function loadDevicePicker(){
@@ -83,6 +103,7 @@ function loadDevicePicker(){
     navBlock.querySelector('.button').style.display = 'none'
     refreshNavBlock()
     lastPage = ['DevicePicker', 'Which device do you have?']
+    new backButton(true, 'Disclaimer()')
     includeHTML()
 }
 

@@ -17,7 +17,10 @@
     <div id="page">
         <div id="menuBar">
             <p class="title"><b>Jailbreak Walkthrough</b></p>
-            <div include="pages/items/tableofcontents-button.html"></div>
+            <div class="buttonRow">
+                <div id="backButton" class="buttonHeader" style="margin-right: 20px;"><p style="margin-top: 11.5px;"><i class="fas fa-arrow-left"></i></p></div>
+                <div id="tableButton" class="buttonHeader" onclick="tableOfContents()"><p style="margin-top: 11.5px;"><i class="fas fa-bars"></i></p></div>
+            </div>
         </div>
         <h1 id="pageTitle"></h1>
         <div id="pageContent"></div>
@@ -33,5 +36,6 @@
     </script>
     <script src="devices.js"></script>
     <script src="jailbreaks.js"></script>
+    <script src="https://kit.fontawesome.com/cd32c1b6c9.js" crossorigin="anonymous"></script>
 </body>
 </html>
