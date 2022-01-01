@@ -93,6 +93,9 @@ body{
     align-items: center;
     flex-direction: row;
 }
+a{
+    color: rgb(180, 180, 180)
+}
 
 ol li:hover{
     color: rgb(80, 80, 80);

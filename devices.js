@@ -2,17 +2,6 @@ var chkrn
 var unthr
 var deviceType
 
-/*
-
-Pages for A-series chips numbered by chip (A15 => page 15).
-Pages for M-series chips numbered in negative by chronological release order (M1 => page -1, M1 Pro/Max => page -2).
-
-Home page is page 1
-
-Legacy devices is page 0
-
-*/
-
 function loadiPhones(page){
     deviceType = ['iPhone', page]
     if (page == 1){
@@ -250,7 +239,7 @@ function loadiOS(version){
             navBlock.querySelector('.button').style.display = ''
             new backButton(true, `${deviceType[0]}s(${deviceType[1]})`)
             refreshNavBlock()
-            new navButton('Jailbreak with checkra1n', 'loadJB(\'chkrn\')')
+            new navButton('Jailbreak with checkra1n', 'loadJB(142)')
             includeHTML()
         }
         else{
@@ -272,7 +261,7 @@ function loadiOS(version){
             navBlock.querySelector('.button').style.display = ''
             new backButton(true, `${deviceType[0]}s(${deviceType[1]})`)
             refreshNavBlock()
-            new navButton('Jailbreak with checkra1n', 'loadJB(\'chkrn\')')
+            new navButton('Jailbreak with checkra1n', 'loadJB(142)')
             includeHTML()
         }
         else if (unthr == true){
@@ -280,7 +269,7 @@ function loadiOS(version){
             navBlock.querySelector('.button').style.display = ''
             new backButton(true, `${deviceType[0]}s(${deviceType[1]})`)
             refreshNavBlock()
-            new navButton('Jailbreak with unc0ver', 'loadJB(\'u0\')')
+            new navButton('Jailbreak with unc0ver', 'loadJB(144)')
             includeHTML()
         }
         else{

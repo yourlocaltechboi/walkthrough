@@ -1,0 +1,40 @@
+PAGES FOR DEVICES, BY CHIPSET:
+
+    Pages for A-series chips numbered by chip (A15 => page 15).
+    Pages for M-series chips numbered in negative numerical order 
+        by chronological release order (M1 => page -1, M1 Pro/Max
+        => page -2).
+
+    Home page is page 1
+
+    Legacy devices is page 0
+
+JAILBREAKS:
+
+    Jailbreaks will be paged as iOS Version, with the jailbreak 
+        type appended in numerical order. If there are multiple
+        jailbreaks of that type, they will be listed below with
+        another number to be appended to the jailbreak page number.
+
+    TYPES OF JAILBREAKS - NUMBERS:
+        1 - Tethered
+        2 - Semi-Tethered
+        3 - Semi-Untethered
+        4 - Untethered
+        5 - Rootless
+
+    DUPLICATE JAILBREAK PAGES - NUMBERS:
+        1431: unc0ver for iOS 14
+        1432: Taurine for iOS 14
+        1331: unc0ver for iOS 13
+        1332: Odyssey for iOS 13
+
+    For example, an iOS 14 jailbreak page for devices with a
+        Semi-Untethered jailbreak would be page 143, as it's iOS 14, 
+        with jailbreak type 3 appended to the iOS version. If the user
+        wanted to jailbreak with Taurine, they would append 2 to this 
+        page, thus the final page number would be 1432. 
+        loadJB(1432); would be used.
+    
+    Pages like 14.5.12 are NOT correct, as iOS versions are only 
+    listed by base version (15.x, 14.x, etc => 15, 14, etc).

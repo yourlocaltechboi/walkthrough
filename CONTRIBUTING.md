@@ -1,10 +1,12 @@
 # Contributing to the Walkthrough
+
 Want to help contribute to this vital documentation? Awesome!
 Follow these instructions to make your time here most useful!
 
 ---
 
 If you are planning to contribute by fixing a bug:
+
 - Please make a pull request with your changes.
 - In your pull request, please give the following (where applicable):
   - A description of the bug
@@ -17,6 +19,7 @@ If you are planning to contribute by fixing a bug:
 ---
 
 If you are planning to add a page to the Walkthrough:
+
 - Please make sure your use of grammar and your JavaScript (if any) match the language usage and syntax rules used in the rest of the walkthrough
 - Please keep external resource usage to a minimum.
 - Please test to ensure your page displays properly on a variety of devices (desktop, notched iPhone, bezeled iPhone, iPad, etc.)
@@ -25,13 +28,14 @@ If you are planning to add a page to the Walkthrough:
   - What page did you add?
   - Why is the page neccesary?
   - Where is the page located? (ex. In between the Welcome page and the About Jailbreaking page)
-  - Did you modify the neccesary JavaScript files to ensure your page shows correctly?
+  - Did you modify the neccesary JavaScript files to ensure your page shows correctly? Please note the page numbers listed in `pageDirection.txt`
 - Please prefix the title of your pull request with [Add Page]
 - If the change includes any personal/licensed content, please verify permission from the author, and provide proof.
 
 ---
 
 If you are planning on making a style change to the Walkthrough:
+
 - Please ensure there is no spaghetti code in your CSS, and/or you can't modify an existing ruleset to do what you want
 - Please make a pull request with your changes
 - In your pull request, include the following (where applicable):
@@ -45,8 +49,9 @@ If you are planning on making a style change to the Walkthrough:
 ---
 
 If you are planning on contributing a translation of the Walkthrough:
+
 - Please create a new folder in the root of the directory with the shortcode for your language. (ES for Spanish, FR for French, etc)
 - Please make a pull request with your changes.
   - Please describe which language you are adding to the Walkthrough
   - By submitting your pull request, you attest that all translated phrases are correct and accurate.
-- In order for your translation to be accepted, you must have 10 additional users attest that your translation is correct. This can be in the form of comments on the pull request. 
+- In order for your translation to be accepted, you must have 10 additional users attest that your translation is correct. This can be in the form of comments on the pull request.
